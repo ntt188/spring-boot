@@ -1,4 +1,4 @@
-package fr.nguyen.springboot;
+package fr.nguyen.springboot.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by tungnguyen on 21/11/2015.
  */
 @RestController
-@EnableAutoConfiguration
 public class SimpleController {
 
     @RequestMapping("/")
@@ -18,7 +17,5 @@ public class SimpleController {
         return "Hello world";
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(SimpleController.class, args);
-    }
+
 }
