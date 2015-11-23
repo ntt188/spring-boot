@@ -1,9 +1,9 @@
 package fr.nguyen.springboot;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 
 /**
@@ -13,7 +13,10 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:server.properties")
 public class Application {
 
+    static final Logger logger = LogManager.getLogger(Application.class);
+
     public static void main(String[] args) {
+        logger.debug("Start application");
         SpringApplication.run(Application.class, args);
     }
 }
